@@ -7,6 +7,32 @@
     <title>Welcome</title>
     <!--Bootstrap-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <script>
+        function displayDetails(){
+            var name = document.getElementById("name").value;
+            var rollno = document.getElementById("rollno").value;
+            var admino = document.getElementById("admino").value;
+            var clg = document.getElementById("clg").value;
+            var place = document.getElementById("place").value;
+            var mobile = document.getElementById("mobile")  .value;
+            document.getElementById("td1").innerHTML = name;
+            document.getElementById("td2").innerHTML = rollno;
+            document.getElementById("td3").innerHTML = admino;
+            document.getElementById("td4").innerHTML = clg;
+            document.getElementById("td5").innerHTML = place;
+            document.getElementById("td6").innerHTML = mobile;
+        }
+        function resetData(){
+            document.getElementById("myForm").reset();            
+            document.getElementById("td1").innerHTML = " ";
+            document.getElementById("td2").innerHTML = " ";
+            document.getElementById("td3").innerHTML = " ";
+            document.getElementById("td4").innerHTML = " ";
+            document.getElementById("td5").innerHTML = " ";
+            document.getElementById("td6").innerHTML = " ";
+        }
+    </script>
 </head>
 <body>
     <div class="container">
@@ -14,40 +40,67 @@
         <div class="row">
             <div class="col col-12 col-sm-6">
                 <div class="card">
-                    <h5 class="card-header"> Register </h5>
+                    <h5 class="card-header text-center"> Register </h5>
                     <div class="card-body">
-                        <form action="">
+                        <form action="" id="myForm">
                             <table class="table table-borderless">
                                 <tr>
                                     <td> Name </td>
-                                    <td> <input type="text" class="form-control"> </td>
+                                    <td> <input type="text" class="form-control" id="name"> </td>
                                 </tr>
                                 <tr>
                                     <td> Rollno </td>
-                                    <td> <input type="number" class="form-control"> </td>
+                                    <td> <input type="number" class="form-control" id="rollno"> </td>
                                 </tr>
                                 <tr>
                                     <td> Admission no </td>
-                                    <td> <input type="number" class="form-control"> </td>
+                                    <td> <input type="number" class="form-control" id="admino"> </td>
                                 </tr>
                                 <tr>
                                     <td> College </td>
-                                    <td> <input type="text" class="form-control"> </td>
+                                    <td> <input type="text" class="form-control" id="clg"> </td>
                                 </tr>
                                 <tr>
                                     <td> Place </td>
-                                    <td> <input type="text" class="form-control"> </td>
+                                    <td> <input type="text" class="form-control" id="place"> </td>
                                 </tr>
                                 <tr>
                                     <td> Mobile </td>
-                                    <td> <input type="number" class="form-control"> </td>
+                                    <td> <input type="number" class="form-control" id="mobile"> </td>
                                 </tr>
                                 <tr>
-                                    <td> <button type="reset" class="btn btn-dark"> Reset </button></td>
-                                    <td> <button type="submit" class="btn btn-success"> Submit </button></td>
+                                    <td> <button type="reset" class="btn btn-dark" onclick="resetData()"> Reset </button></td>
+                                    <td> <button type="button" class="btn btn-success" onclick="displayDetails()"> Submit </button></td>
                                 </tr>
                             </table>
                         </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-12 col-sm-6">
+                <div class="card">
+                    <h5 class="card-header"> Details </h5>
+                    <div class="card-body">
+                        <table class="table table-borderless">
+                            <tr>
+                                <td id="td1"> </td>
+                            </tr>
+                            <tr>
+                                <td id="td2"> </td>
+                            </tr>
+                            <tr>
+                                <td id="td3"> </td>
+                            </tr>
+                            <tr>
+                                <td id="td4"> </td>
+                            </tr>
+                            <tr>
+                                <td id="td5"> </td>
+                            </tr>
+                            <tr>
+                                <td id="td6"> </td>
+                            </tr>
+                        </table>
                     </div>
                 </div>
             </div>
