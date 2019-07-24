@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Largest Number</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <script>
+        function checkLargest(){
+            var n1 = document.getElementById("num1").value;
+            var n2 = document.getElementById("num2").value;
+            if (n2 > n1){
+                document.getElementById("display").innerHTML = n2 + " is largest ";
+            }
+            else if(n2 < n1){
+                document.getElementById("display").innerHTML =  n1 + " is largest ";
+            }
+            else{
+                document.getElementById("display").innerHTML =  "Equal" ;
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <br>
+        <div class="row">
+            <div class="col col-12 col-sm-6">
+                <form action="">
+                    <table class="table table-borderless">
+                        <tr>
+                            <td> Enter first number: </td>
+                            <td> <input type="number" id="num1" class="form-control"> </td>
+                        </tr>
+                        <tr>
+                            <td> Enter second number: </td>
+                            <td> <input type="number" id="num2" class="form-control"> </td>
+                        </tr>
+                        <tr>
+                            <td> </td>
+                            <td><button type="button" class="btn btn-primary" onclick="checkLargest()" > Check </button></td>
+                        </tr>
+                        <tr>
+                            <td> <p id="display"> </p> </td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

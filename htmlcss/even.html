@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Even or Odd</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <script>
+        function checkNumber(){
+            var n = document.getElementById("num").value;
+            if (n%2==0){
+                document.getElementById("display").innerHTML = "Even number";
+            }
+            else{
+                document.getElementById("display").innerHTML = "Odd number";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <br>
+        <div class="row">
+            <div class="col col-12 col-sm-6">
+                <div class="card">
+                    <h5 class="card-header"> Even or Odd</h5>
+                    <div class="card-body">
+                        <form action="">
+                            <table class="table table-borderless">
+                                <tr>
+                                    <td> Enter number: </td>
+                                    <td> <input type="number" id="num" class="form-control"> </td>
+                                </tr>
+                                <tr>
+                                    <td> </td>
+                                    <td><button type="button" class="btn btn-primary" onclick="checkNumber()" > Check </button></td>
+                                </tr>
+                            </table>
+                            <h6 class="text-success text-center" id="display"> </h6> 
+                        </form>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</body>
+</html>
