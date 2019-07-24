@@ -27,26 +27,33 @@
     <div class="container">
         <br>
         <div class="row">
-            <div class="col col-12 col-sm-6">
-                <form action="">
-                    <table class="table table-borderless">
-                        <tr>
-                            <td> Enter first number: </td>
-                            <td> <input type="number" id="num1" class="form-control"> </td>
-                        </tr>
-                        <tr>
-                            <td> Enter second number: </td>
-                            <td> <input type="number" id="num2" class="form-control"> </td>
-                        </tr>
-                        <tr>
-                            <td> </td>
-                            <td><button type="button" class="btn btn-primary" onclick="checkLargest()" > Check </button></td>
-                        </tr>
-                        <tr>
-                            <td> <p id="display"> </p> </td>
-                        </tr>
-                    </table>
-                </form>
+            <div class="col col-12 col-sm-12">
+                <div class="card">
+                    <h5 class="card-header"> Largest Number </h5>
+                    <div class="card-body">
+                        <form action="">
+                            <table class="table table-borderless">
+                                <tr>
+                                    <td> Enter first number: </td>
+                                    <td> <input type="number" id="num1" class="form-control"> </td>
+                                </tr>
+                                <tr>
+                                    <td> Enter second number: </td>
+                                    <td> <input type="number" id="num2" class="form-control"> </td>
+                                </tr>
+                                <tr>
+                                    <td> </td>
+                                    <td><button type="button" class="btn btn-primary" onclick="checkLargest()" > Check </button></td>
+                                </tr>
+                                <tr>
+                                    <td> Result: </td>
+                                    <td> <h6 class="text-success" id="display"> </h6> </td>
+                                </tr>
+                            </table>
+                        </form>
+                    </div>
+                </div>
+                
             </div>
         </div>
     </div>
