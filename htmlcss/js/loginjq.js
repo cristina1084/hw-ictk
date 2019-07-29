@@ -1,0 +1,9 @@
+$(document).ready(function(){
+    $("#btn1").click(function(){
+        $("#card1").toggle();
+    });
+    $("#btn2").click(function(){
+        $("#card2").toggle();
+    });
+    $("#card3").hide();
+});
